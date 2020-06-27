@@ -1,0 +1,31 @@
+{
+  "name": "geotiff-palette",
+  "version": "0.0.0",
+  "description": "Get the Palette (aka Color Map) for a GeoTIFF",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeoTIFF/geotiff-palette.git"
+  },
+  "keywords": [
+    "geotiff",
+    "palette",
+    "color",
+    "colortable",
+    "colormap",
+    "rgb"
+  ],
+  "author": "Daniel J. Dufour",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/GeoTIFF/geotiff-palette/issues"
+  },
+  "homepage": "https://github.com/GeoTIFF/geotiff-palette#readme",
+  "devDependencies": {
+    "ava": "^3.9.0",
+    "geotiff": "^1.0.0-beta.12"
+  }
+}
