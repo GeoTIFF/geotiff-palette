@@ -1,7 +1,7 @@
-const { readFileSync } = require('fs');
-const test = require('flug');
-const { fromArrayBuffer } = require('geotiff');
-const { getPalette } = require('../index.js');
+import { readFileSync } from 'fs';
+import test from 'flug';
+import { fromArrayBuffer } from 'geotiff';
+import { getPalette } from '../index.js';
 
 test('reading RGB palette', async ({ eq }) => {
     const data = readFileSync('test/data/rgb_paletted.tiff');

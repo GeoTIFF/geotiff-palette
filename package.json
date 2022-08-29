@@ -3,8 +3,15 @@
   "version": "0.0.0",
   "description": "Get the Palette (aka Color Map) for a GeoTIFF",
   "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.d.ts",
+    "index.js"
+  ],
   "scripts": {
-    "test": "ava"
+    "test": "npm run test:js && npm run test:ts",
+    "test:js": "node -r require-esm-deasync ./test/test.js",
+    "test:ts": "npx ts-node -r require-esm-deasync ./test/test.ts"
   },
   "repository": {
     "type": "git",
@@ -25,7 +32,9 @@
   },
   "homepage": "https://github.com/GeoTIFF/geotiff-palette#readme",
   "devDependencies": {
-    "ava": "^3.9.0",
-    "geotiff": "^1.0.0-beta.12"
+    "deasync": "^0.1.28",
+    "flug": "^2.3.1",
+    "geotiff": "^2.0.5",
+    "require-esm-deasync": "^0.1.0"
   }
 }

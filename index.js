@@ -1,15 +1,7 @@
-const getPalette = (image, { debug = false } = { debug: false }) => {
+function getPalette (image, { debug = false } = { debug: false }) {
     if (debug) console.log("starting getPalette with image", image);
     const { fileDirectory } = image;
-    const {
-        BitsPerSample,
-        ColorMap,
-        ImageLength,
-        ImageWidth,
-        PhotometricInterpretation,
-        SampleFormat,
-        SamplesPerPixel
-    } = fileDirectory;
+    const { BitsPerSample, ColorMap } = fileDirectory;
 
     if (!ColorMap) {
         throw new Error("[geotiff-palette]: the image does not contain a color map, so we can't make a palette.");
@@ -43,4 +35,10 @@ const getPalette = (image, { debug = false } = { debug: false }) => {
     return result;
 }
 
-module.exports = { getPalette };
+if (typeof define === "function" && define.amd) {
+    define(function() { return { getPalette } });
+}
+
+if (typeof module === "object") {
+    module.exports = { getPalette };
+}

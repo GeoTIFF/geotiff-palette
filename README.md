@@ -9,9 +9,9 @@ npm install geotiff-palette
 # usage
 ## downloaded GeoTIFF
 ```
-const { readFileSync } = require('fs');
-const { fromArrayBuffer } = require('geotiff');
-const { getPalette } = require('geotiff-palette');
+import { readFileSync } from 'fs';
+import { fromArrayBuffer } from 'geotiff';
+import { getPalette } from 'geotiff-palette';
 
 const data = readFileSync('image.tif');
 const arrayBuffer = data.buffer.slice(data.byteOffset, data.byteOffset + data.byteLength);

@@ -106,3 +106,4 @@ dist
 *.tif
 *.tiff
 test/data/*.json
+pnpm-lock.yaml
