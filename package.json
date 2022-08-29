@@ -1,6 +1,6 @@
 {
   "name": "geotiff-palette",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Get the Palette (aka Color Map) for a GeoTIFF",
   "main": "index.js",
   "types": "index.d.ts",
